@@ -9,11 +9,11 @@ import { FaDev, FaDatabase } from 'react-icons/fa'
 
 
 const personalDetails = [
-    { label: "Name", value: "Jordan Avir" },
-    { label: "Age", value: "20" },
-    { label: "Address", value: "Bolivia" },
+    { label: "Nombre", value: "Jordan Avir" },
+    { label: "Años", value: "21" },
+    { label: "País", value: "Bolivia" },
     { label: "Email", value: "burgosjordan194@gmail.com" },
-    { label: "Contact", value: "+591 76346429" }
+    { label: "Número", value: "+591 76346429" }
 ];
 
 const jobSummary = 'Estudiante de Ingeniería de Sistemas con pasión por resolver problemas y crear soluciones innovadoras. En constante búsqueda de aprendizaje y desarrollo de habilidades en tecnología de la información. Una persona responsable y con capacidad de adaptación y dedicación para ofrecer lo mejor en cada situación.';
