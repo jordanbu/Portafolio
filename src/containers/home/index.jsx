@@ -30,7 +30,7 @@ const Home = () => {
         }}
       >
         <div className="home__contact_me">
-          <button onClick={handleNavigateToContactMePage}>Hire Me</button>
+          <button onClick={handleNavigateToContactMePage}>Contactar</button>
         </div>
       </Animate>
     </section>
