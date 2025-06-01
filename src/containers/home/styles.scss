@@ -12,19 +12,19 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 100%; /* Ensure the container takes full width */
-    padding: 0 20px; /* Add padding to prevent text from touching edges */
-    box-sizing: border-box; /* Ensure padding doesn’t increase width */
+    width: 100%; /* Ensure container takes full width */
+    padding: 0 15px; /* Add padding to prevent edge clipping */
+    box-sizing: border-box; /* Include padding in width calculation */
 
     h1 {
       color: var(--yellow-theme-main-color);
       margin: 0;
       font-weight: 500;
-      font-size: 6rem; /* Reduced default font size for better scaling */
-      line-height: 7rem; /* Adjusted line height */
+      font-size: 6rem; /* Reduced default size for better scaling */
+      line-height: 7rem;
       position: relative;
-      overflow: visible; /* Changed to visible to prevent text cutoff */
-      white-space: normal; /* Allow text wrapping */
+      overflow: hidden;
+      white-space: nowrap; /* Keep nowrap for typing effect on larger screens */
       animation: typingEffectAnimation 2.5s steps(30, end);
     }
   }
@@ -58,12 +58,14 @@
   .home__text-wrapper h1 {
     font-size: 2.5rem; /* Smaller font size for very small screens */
     line-height: 3.5rem;
-    white-space: normal; /* Ensure text wraps */
+    white-space: normal; /* Allow text wrapping */
+    overflow: visible; /* Prevent clipping */
+    animation: typingEffectAnimationMobile 2.5s ease-in-out; /* Adjusted animation */
   }
 
   .home__contact_me button {
-    padding: 8px 30px; /* Smaller padding */
-    font-size: 1.4rem; /* Smaller font size */
+    padding: 8px 30px;
+    font-size: 1.4rem;
   }
 }
 
@@ -72,6 +74,8 @@
   .home__text-wrapper h1 {
     font-size: 3.5rem;
     line-height: 4.5rem;
+    white-space: normal; /* Allow wrapping */
+    overflow: visible;
   }
 
   .home__contact_me button {
@@ -85,6 +89,7 @@
   .home__text-wrapper h1 {
     font-size: 4.5rem;
     line-height: 5.5rem;
+    white-space: normal; /* Allow wrapping for better fit */
   }
 }
 
@@ -96,14 +101,26 @@
   }
 }
 
-/* Animation adjusted to work with wrapping text */
+/* Typing effect for larger screens */
 @keyframes typingEffectAnimation {
   from {
-    opacity: 0; /* Start with invisible text */
-    transform: translateY(20px); /* Slight upward animation */
+    width: 0;
+    opacity: 1;
   }
   to {
-    opacity: 1; /* Fully visible */
+    width: 100%;
+    opacity: 1;
+  }
+}
+
+/* Adjusted typing effect for mobile to avoid clipping */
+@keyframes typingEffectAnimationMobile {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
     transform: translateY(0);
   }
 }
