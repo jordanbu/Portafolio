@@ -12,16 +12,19 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    width: 100%; /* Ensure the container takes full width */
+    padding: 0 20px; /* Add padding to prevent text from touching edges */
+    box-sizing: border-box; /* Ensure padding doesn’t increase width */
 
     h1 {
       color: var(--yellow-theme-main-color);
       margin: 0;
       font-weight: 500;
-      font-size: 8rem;
-      line-height: 10rem;
+      font-size: 6rem; /* Reduced default font size for better scaling */
+      line-height: 7rem; /* Adjusted line height */
       position: relative;
-      overflow: hidden;
-      white-space: nowrap;
+      overflow: visible; /* Changed to visible to prevent text cutoff */
+      white-space: normal; /* Allow text wrapping */
       animation: typingEffectAnimation 2.5s steps(30, end);
     }
   }
@@ -50,10 +53,25 @@
   }
 }
 
-@media only screen and (max-width: 550px) {
+/* Extra small screens (e.g., Tecno Spark, ~360px–480px) */
+@media only screen and (max-width: 480px) {
   .home__text-wrapper h1 {
-    font-size: 4rem;
-    line-height: 5rem;
+    font-size: 2.5rem; /* Smaller font size for very small screens */
+    line-height: 3.5rem;
+    white-space: normal; /* Ensure text wraps */
+  }
+
+  .home__contact_me button {
+    padding: 8px 30px; /* Smaller padding */
+    font-size: 1.4rem; /* Smaller font size */
+  }
+}
+
+/* Small screens (481px–550px) */
+@media only screen and (min-width: 481px) and (max-width: 550px) {
+  .home__text-wrapper h1 {
+    font-size: 3.5rem;
+    line-height: 4.5rem;
   }
 
   .home__contact_me button {
@@ -62,25 +80,30 @@
   }
 }
 
+/* Medium screens (551px–768px) */
 @media only screen and (min-width: 551px) and (max-width: 768px) {
   .home__text-wrapper h1 {
-    font-size: 5rem;
-    line-height: 6rem;
+    font-size: 4.5rem;
+    line-height: 5.5rem;
   }
 }
 
+/* Larger screens (769px–990px) */
 @media only screen and (min-width: 769px) and (max-width: 990px) {
   .home__text-wrapper h1 {
-    font-size: 6rem;
-    line-height: 8rem;
+    font-size: 5.5rem;
+    line-height: 7rem;
   }
 }
 
+/* Animation adjusted to work with wrapping text */
 @keyframes typingEffectAnimation {
   from {
-    width: 0;
+    opacity: 0; /* Start with invisible text */
+    transform: translateY(20px); /* Slight upward animation */
   }
   to {
-    width: 100%;
+    opacity: 1; /* Fully visible */
+    transform: translateY(0);
   }
 }
