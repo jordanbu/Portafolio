@@ -1,26 +1,10 @@
-import React, { useState } from "react";
+import React from "react";
 import PageHeaderContent from "../../components/pageHeaderContent";
 import { BsInfoCircleFill } from "react-icons/bs";
 import { FaWhatsapp, FaLinkedin, FaInstagram, FaFacebook } from "react-icons/fa";
 import "./styles.scss";
 
 const Contact = () => {
-  const [formData, setFormData] = useState({
-    email: "",
-    subject: "",
-    message: "",
-  });
-
-  const handleChange = (e) => {
-    setFormData(prev => ({ ...prev, [e.target.name]: e.target.value }));
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    alert("Mensaje enviado (simulado). ¡Gracias!");
-    setFormData({ email: "", subject: "", message: "" });
-  };
-
   return (
     <section id="contact" className="contact">
       <PageHeaderContent
@@ -28,76 +12,67 @@ const Contact = () => {
         icon={<BsInfoCircleFill size={40} />}
       />
 
-      <div className="contact__socials">
+      <div className="contact__cards">
         <a
           href="https://wa.me/59176346429"
           target="_blank"
           rel="noopener noreferrer"
           aria-label="WhatsApp"
-          className="contact__icon"
+          className="contact__card"
           style={{ animationDelay: "0s" }}
         >
-          <FaWhatsapp />
+          <FaWhatsapp className="contact__icon" />
+          <span>WhatsApp</span>
         </a>
+
         <a
-          href="https://linkedin.com/in/tu-perfil"
+          href="https://www.linkedin.com/in/burgosjordan/"
           target="_blank"
           rel="noopener noreferrer"
           aria-label="LinkedIn"
-          className="contact__icon"
+          className="contact__card"
           style={{ animationDelay: "0.2s" }}
         >
-          <FaLinkedin />
+          <FaLinkedin className="contact__icon" />
+          <span>LinkedIn</span>
         </a>
+
         <a
           href="https://instagram.com/tu-usuario"
           target="_blank"
           rel="noopener noreferrer"
           aria-label="Instagram"
-          className="contact__icon"
+          className="contact__card"
           style={{ animationDelay: "0.4s" }}
         >
-          <FaInstagram />
+          <FaInstagram className="contact__icon" />
+          <span>Instagram</span>
         </a>
+
         <a
           href="https://facebook.com/tu-pagina"
           target="_blank"
           rel="noopener noreferrer"
           aria-label="Facebook"
-          className="contact__icon"
+          className="contact__card"
           style={{ animationDelay: "0.6s" }}
         >
-          <FaFacebook />
+          <FaFacebook className="contact__icon" />
+          <span>Facebook</span>
+        </a>
+
+        <a
+          href="mailto:burgosjordan194@gmail.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Email"
+          className="contact__card"
+          style={{ animationDelay: "0.8s" }}
+        >
+          <BsInfoCircleFill className="contact__icon" />
+          <span>Correo Electronico</span>
         </a>
       </div>
-
-      <form className="contact__form" onSubmit={handleSubmit}>
-        <input
-          type="email"
-          name="email"
-          placeholder="Tu correo electrónico"
-          value={formData.email}
-          onChange={handleChange}
-          required
-        />
-        <input
-          type="text"
-          name="subject"
-          placeholder="Asunto"
-          value={formData.subject}
-          onChange={handleChange}
-          required
-        />
-        <textarea
-          name="message"
-          placeholder="Escribe tu mensaje aquí..."
-          value={formData.message}
-          onChange={handleChange}
-          rows={5}
-          required
-        />
-        <button type="submit">Enviar Mensaje</button>
-      </form>
     </section>
   );
 };
