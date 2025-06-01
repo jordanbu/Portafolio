@@ -1,6 +1,11 @@
 .navbar {
   background-color: var(--yellow-theme-nav-background-color);
   height: 80px;
+  width: 100%; // Asegura que cubre todo el ancho
+  position: fixed; // Fija el navbar arriba
+  top: 0;
+  left: 0;
+  z-index: 999;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -9,9 +14,10 @@
   &_container {
     display: flex;
     align-items: center;
+    justify-content: space-between;
     width: 100%;
-    height: inherit;
-    padding: 0px 20px;
+    height: 100%;
+    padding: 0 20px;
 
     &_logo {
       color: var(--yellow-theme-main-color);
@@ -46,7 +52,7 @@
           color: var(--yellow-theme-main-color);
           text-decoration: none;
           padding: 0.5rem;
-          display: block; /* Ensure links are full-width for better clickability */
+          display: block;
         }
       }
     }
@@ -61,41 +67,38 @@
   .navbar_container_menu {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
+    align-items: center;
     width: 100%;
-    border-top: 1px solid #fff;
-    position: absolute;
+    height: 100vh;
+    position: fixed;
     top: 80px;
-    left: -100%; /* Changed from -110% to -100% for proper alignment */
-    opacity: 1;
-    transition: all 0.5s ease;
-    background: var(--yellow-theme-nav-background-color); /* Match navbar background */
-    z-index: 1000; /* Ensure menu is above other elements */
-    height: calc(100vh - 80px); /* Full height minus navbar */
-    overflow-y: auto; /* Allow scrolling if content overflows */
+    left: -100%;
+    background: var(--yellow-theme-nav-background-color);
+    transition: left 0.5s ease;
+    z-index: 1000;
+    overflow-y: auto;
 
     &.active {
       left: 0;
-      opacity: 1;
     }
 
     &_item {
+      width: 100%;
       border-bottom: 1px solid #181818;
-      margin: 0;
-      padding: 20px 0;
 
       &_links {
         width: 100%;
         display: block;
         padding: 20px;
-        font-size: 1.8rem; /* Larger font for better readability */
+        font-size: 1.8rem;
         color: var(--yellow-theme-main-color);
         text-align: center;
         text-decoration: none;
         transition: background 0.3s ease;
 
         &:hover {
-          background: rgba(255, 255, 255, 0.1); /* Subtle hover effect */
+          background: rgba(255, 255, 255, 0.1);
         }
       }
     }
@@ -105,7 +108,5 @@
     display: block;
     cursor: pointer;
     color: var(--yellow-theme-main-color);
-    padding-right: 20px; /* Original padding */
-    /* Removed absolute positioning, top, transform, and z-index */
   }
 }
