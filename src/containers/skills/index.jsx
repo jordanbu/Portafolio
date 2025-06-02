@@ -1,58 +1,40 @@
-import React from "react"; // React debe ir con mayúscula
-import { Animate, AnimateKeyframes } from "react-simple-animate";
+import React from "react";
 import PageHeaderContent from "../../components/pageHeaderContent";
 import { BsInfoCircleFill } from "react-icons/bs";
-import { skillsData } from "./utils";
-import { Line } from "rc-progress"; // Agregado para que funcione <Line />
-import "./styles.scss"; // Corregido el path relativo
+import "./styles.scss";
+
+const skills = [
+  { name: "React", image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" },
+  { name: "Node.js", image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" },
+  { name: "Git", image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" },
+  { name: "HTML5", image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" },
+  { name: "CSS3", image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" },
+  { name: "JavaScript", image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" },
+  { name: "Flutter", image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg" },
+  { name: "Python", image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" },
+  { name: "Firebase", image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg" },
+  { name: "MongoDB", image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" },
+  { name: "MySQL", image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" },
+  { name: "PostgreSQL", image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" },
+  { name: "TypeScript", image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" },
+];
 
 const Skills = () => {
   return (
     <section id="skills" className="skills">
       <PageHeaderContent
-        headerText="My Skills"
+        headerText="Habilidades"
         icon={<BsInfoCircleFill size={40} />}
       />
-      <div className="skills_content-wrapper">
-        {skillsData.map((item, i) => (
-          <div key={i} className="skills_content-wrapper_inner-content">
-            <Animate
-              play
-              duration={1}
-              delay={0.3}
-              start={{
-                transform: "translateX(-200px)",
-              }}
-              end={{
-                transform: "translateX(0px)",
-              }}
-            >
-              <h3 className="skills_content-wrapper_inner-content_category-text">
-                {item.label}
-              </h3>
-              <div className="skills_content-wrapper_inner-content_progressbar-container">
-                {item.data.map((skillsItem, j) => (
-                  <AnimateKeyframes
-                    play
-                    duration={1}
-                    keyframes={["opacity: 1", "opacity: 0"]}
-                    iterationCount="1"
-                    key={j}
-                  >
-                    <div className="progressbar-wrapper">
-                      <p>{skillsItem.skillName}</p>
-                      <Line
-                        percent={skillsItem.percentage}
-                        strokeWidth="2"
-                        strokeColor="var(--yellow-theme-main-color)"
-                        trailWidth="2"
-                        strokeLinecap="square"
-                      />
-                    </div>
-                  </AnimateKeyframes>
-                ))}
-              </div>
-            </Animate>
+      <div className="skills__cards">
+        {skills.map((skill, i) => (
+          <div
+            key={skill.name}
+            className="skills__card"
+            style={{ animationDelay: `${i * 0.2}s` }}
+          >
+            <img src={skill.image} alt={skill.name} className="skills__image" />
+            <span className="skills__name">{skill.name}</span>
           </div>
         ))}
       </div>

@@ -1,26 +1,37 @@
 export const skillsData = [
   {
     label: "FRONT END",
-    data: [
-      { skillName: "HTML", percentage: "90" },
-      { skillName: "CSS", percentage: "90" },
-      { skillName: "JavaScript", percentage: "90" },
+    skills: [
+      { name: "React Native", icon: "devicon-react-original" },
+      { name: "Flutter", icon: "devicon-flutter-plain" },
+      { name: "TypeScript", icon: "devicon-typescript-plain" },
+      { name: "JavaScript", icon: "devicon-javascript-plain" },
+      { name: "HTML", icon: "devicon-html5-plain" },
+      { name: "CSS", icon: "devicon-css3-plain" },
     ],
   },
   {
     label: "BACK END",
-    data: [
-      { skillName: "Node.js", percentage: "90" },
-      { skillName: "Express", percentage: "90" },
-      { skillName: "Python", percentage: "90" },
+    skills: [
+      { name: "Node.js", icon: "devicon-nodejs-plain" },
+      { name: "Python", icon: "devicon-python-plain" },
+      { name: "Express", icon: "devicon-express-original" },
+      { name: "Expo", icon: "devicon-expo-plain" },
     ],
   },
   {
     label: "DATABASE",
-    data: [
-      { skillName: "MySQL", percentage: "90" },
-      { skillName: "MongoDB", percentage: "90" },
-      { skillName: "PostgreSQL", percentage: "90" },
+    skills: [
+      { name: "MongoDB", icon: "devicon-mongodb-plain" },
+      { name: "MySQL", icon: "devicon-mysql-plain" },
+      { name: "SQL Server", icon: "devicon-microsoftsqlserver-plain" },
+    ],
+  },
+  {
+    label: "TOOLS & PLATFORMS",
+    skills: [
+      { name: "Firebase", icon: "devicon-firebase-plain" },
+      { name: "Google Console", icon: "devicon-google-plain" },
     ],
   },
 ];

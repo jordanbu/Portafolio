@@ -17,10 +17,5 @@ export const data = {
       subtitle: "Universidad para el Desarrollo y la Innovacion",
       description: "Estudiante de la Universidad UDI, 5to Semestre",
     },
-    {
-      title: "Curso de React",
-      subtitle: "Platzi",
-      description: "Curso intensivo sobre React, Hooks y context API.",
-    },
   ],
 };
