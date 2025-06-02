@@ -1,21 +1,21 @@
 export const data = {
   experience: [
     {
-      title: "Full Stack Developer",
-      subtitle: "Tech Company",
-      description: "Desarrollé aplicaciones web usando React y Node.js.",
+      title: "Desarollador",
+      subtitle: "Datec Latam",
+      description: "Desarrollo Front End de dashboard de monitoreo de delivery EGX Turbo con React TypeScript,Soporte y monitoreo de las plataformas.",
     },
     {
-      title: "Frontend Developer",
-      subtitle: "Startup XYZ",
-      description: "Implementé interfaces modernas con React y Sass.",
-    },
+  title: "Proyecto Académico UdiNova",
+  subtitle: "Desarrollo Web y Móvil",
+  description: "Aplicación móvil desarrollada con React Native que integra APIs de Google Maps y Google Cloud Vision para reconocimiento de imágenes y geolocalización en tiempo real. Incluye autenticación con Firebase y almacenamiento en Firestore.",
+}
   ],
   education: [
     {
       title: "Ingeniería de Sistemas",
-      subtitle: "Universidad Nacional",
-      description: "Estudios universitarios en desarrollo de software y bases de datos.",
+      subtitle: "Universidad para el Desarrollo y la Innovacion",
+      description: "Estudiante de la Universidad UDI, 5to Semestre",
     },
     {
       title: "Curso de React",
