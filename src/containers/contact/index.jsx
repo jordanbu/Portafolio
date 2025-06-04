@@ -38,7 +38,7 @@ const Contact = () => {
         </a>
 
         <a
-          href="https://instagram.com/tu-usuario"
+          href="https://www.instagram.com/__jordanbc_/"
           target="_blank"
           rel="noopener noreferrer"
           aria-label="Instagram"
