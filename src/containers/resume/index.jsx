@@ -22,7 +22,7 @@ const Resume = () => {
       <div className="resume_content-wrapper">
         <div className="resume_experience">
           <h3 className="resume_section-title">Experience</h3>
-          <VerticalTimeline layout="1-column" lineColor="#f7c600">
+          <VerticalTimeline layout="1-column" lineColor="var(--yellow-theme-main-color)">
             {data.experience.map((item, index) => (
               <Animate
                 key={index}
@@ -51,7 +51,7 @@ const Resume = () => {
 
         <div className="resume_education">
           <h3 className="resume_section-title">Education</h3>
-          <VerticalTimeline layout="1-column" lineColor="#f7c600">
+          <VerticalTimeline layout="1-column" lineColor="var(--yellow-theme-main-color)">
             {data.education.map((item, index) => (
               <Animate
                 key={index}
