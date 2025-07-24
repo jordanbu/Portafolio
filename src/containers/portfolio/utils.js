@@ -1,7 +1,7 @@
 export const portfolioData = [
   {
-    title: "E-Commerce Website",
-    description: "App de Inventario con Flutter y Firebase",
+    title: "App de Inventario con Flutter y Firebase",
+    description: "Aplicacion movil de inventaio con Flutter y Firebase, con funcionalidades de Authenticacion,CRUD y alamacenamiento en la nube",
     link: "https://youtube.com/shorts/gT5mRAeUqsQ?feature=share",
   },
   {
