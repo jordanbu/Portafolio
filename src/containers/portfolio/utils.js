@@ -1,9 +1,8 @@
 export const portfolioData = [
   {
     title: "E-Commerce Website",
-    description: "Tienda online moderna con React, Stripe y Firebase.",
-    image: "/images/ecommerce.png",
-    link: "https://myecommerce.example.com",
+    description: "App de Inventario con Flutter y Firebase",
+    link: "https://youtube.com/shorts/gT5mRAeUqsQ?feature=share",
   },
   {
     title: "App de Geolocalización con React y Google Maps",
