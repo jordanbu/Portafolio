@@ -38,7 +38,7 @@ const Portfolio = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Ver Proyectos
+                Ver Proyecto
               </a>
             )}
           </div>

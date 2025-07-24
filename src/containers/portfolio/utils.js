@@ -1,8 +1,9 @@
 export const portfolioData = [
   {
     title: "App de Inventario con Flutter y Firebase",
-    description: "Aplicacion movil de inventaio con Flutter y Firebase, con funcionalidades de Authenticacion,CRUD y alamacenamiento en la nube",
-    video: "https://youtube.com/shorts/gT5mRAeUqsQ?feature=share",
+    description:
+      "Aplicación móvil de inventario con Flutter y Firebase, con funcionalidades de Autenticación, CRUD y almacenamiento en la nube.",
+    video: "https://www.youtube.com/embed/gT5mRAeUqsQ",
   },
   {
     title: "App de Geolocalización con React y Google Maps",
@@ -12,7 +13,8 @@ export const portfolioData = [
   },
   {
     title: "Mi Portafolio Animado en React Native",
-    description: "Portafolio interactivo con React Native y efecto Particles.js, diseño moderno y responsive.",
+    description:
+      "Portafolio interactivo con React Native y efecto Particles.js, diseño moderno y responsive.",
     video: "https://www.youtube.com/embed/FCnmUb93OTA",
   },
 ];
