@@ -2,7 +2,7 @@ export const portfolioData = [
   {
     title: "App de Inventario con Flutter y Firebase",
     description: "Aplicacion movil de inventaio con Flutter y Firebase, con funcionalidades de Authenticacion,CRUD y alamacenamiento en la nube",
-    link: "https://youtube.com/shorts/gT5mRAeUqsQ?feature=share",
+    video: "https://youtube.com/shorts/gT5mRAeUqsQ?feature=share",
   },
   {
     title: "App de Geolocalización con React y Google Maps",
