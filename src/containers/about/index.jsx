@@ -10,7 +10,7 @@ import { FaDev, FaDatabase } from 'react-icons/fa'
 
 const personalDetails = [
     { label: "Nombre", value: "Jordan Avir" },
-    { label: "Años", value: "21" },
+    { label: "Años", value: "20" },
     { label: "País", value: "Bolivia" },
     { label: "Email", value: "burgosjordan194@gmail.com" },
     { label: "Número", value: "+591 76346429" }
